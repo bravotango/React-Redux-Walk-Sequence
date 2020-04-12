@@ -29,3 +29,17 @@ export const cycle = () => {
     type: "CYCLING"
   };
 };
+
+export const setIntervalId = id => {
+  return {
+    type: "SET_INTERVAL",
+    payload: id
+  };
+};
+
+export const clearIntervalId = id => {
+  return {
+    type: "CLEAR_INTERVAL",
+    payload: id
+  };
+};

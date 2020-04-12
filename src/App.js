@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Walk from "./components/Walk.js";
+import Walk from "./components/Walk";
+import Controls from "./components/controls";
 
 function App() {
   const counter = useSelector(state => state.counter);
@@ -10,8 +11,9 @@ function App() {
       <div className="row">
         <div className="col-sm">
           <div className="App">
-            <h1>{counter}</h1>
+            <h1>Slide {counter + 1}</h1>
             <Walk />
+            <Controls />
           </div>
         </div>
       </div>
