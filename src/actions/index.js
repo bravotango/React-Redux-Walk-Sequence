@@ -1,14 +1,14 @@
-export const increment = num => {
+export const increment = (num, len) => {
   return {
     type: "INCREMENT",
-    payload: num
+    payload: { num, len }
   };
 };
 
-export const decrement = num => {
+export const decrement = (num, len) => {
   return {
     type: "DECREMENT",
-    payload: num
+    payload: { num, len }
   };
 };
 

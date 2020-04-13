@@ -1,13 +1,13 @@
 const imageReducer = (
   state = [
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-15.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-16.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-17.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-18.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-19.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-20.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-21.jpg",
-    "https://cms-assets.tutsplus.com/uploads/users/1112/posts/25975/image/animate-walk-front-slide-22.jpg"
+    "https://www.btgraphix.com/walk/w1.jpg",
+    "https://www.btgraphix.com/walk/w2.jpg",
+    "https://www.btgraphix.com/walk/w3.jpg",
+    "https://www.btgraphix.com/walk/w4.jpg",
+    "https://www.btgraphix.com/walk/w5.jpg",
+    "https://www.btgraphix.com/walk/w6.jpg",
+    "https://www.btgraphix.com/walk/w7.jpg",
+    "https://www.btgraphix.com/walk/w8.jpg"
   ],
   action
 ) => {

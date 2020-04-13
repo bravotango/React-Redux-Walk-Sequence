@@ -22,20 +22,24 @@ class Walk extends Component {
     if (!interval && isCycling) {
       setIntervalId(
         setInterval(() => {
-          increment(1);
+          increment(1, images.length - 1);
         }, 250)
       );
     }
 
-    if (!isCycling) {
-      // alert("not cycling, clearing interval : " + interval);
+    if (interval && !isCycling) {
+      alert("not cycling, clearing interval : " + interval);
       clearInterval(interval);
       clearIntervalId(interval);
     }
 
     return (
       <div>
-        <img alt="walk sequence image" src={images[counter]} />
+        <img
+          className="img-fluid"
+          alt="walk sequence image"
+          src={images[counter]}
+        />
       </div>
     );
   }
@@ -52,17 +56,17 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    increment: num => {
-      dispatch({ type: "INCREMENT", payload: parseInt(num) });
+    increment: (num, len) => {
+      dispatch({ type: "INCREMENT", payload: { num, len } });
     },
     pause: () => {
       dispatch({ type: "PAUSE" });
     },
     setIntervalId: cycleId => {
-      dispatch({ type: "SET_INTERVAL", payload: parseInt(cycleId) });
+      dispatch({ type: "SET_INTERVAL", payload: cycleId });
     },
     clearIntervalId: cycleId => {
-      dispatch({ type: "CLEAR_INTERVAL", payload: parseInt(cycleId) });
+      dispatch({ type: "CLEAR_INTERVAL", payload: cycleId });
     }
   };
 };
