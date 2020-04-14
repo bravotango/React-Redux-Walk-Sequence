@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Walk from "./components/Walk";
+import Walk from "./components/walk";
 import Controls from "./components/controls";
 
 function App() {
@@ -9,14 +9,14 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <div class="col-sm">
-          <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+        <div className="col-sm">
+          <nav className="navbar navbar-light bg-light">
+            <a className="navbar-brand" href="#">
               <img
                 src="/docs/4.4/assets/brand/bootstrap-solid.svg"
                 width="30"
                 height="30"
-                class="d-inline-block align-top"
+                className="d-inline-block align-top"
                 alt=""
               />
               React | Redux | BootstrapCSS
@@ -26,15 +26,15 @@ function App() {
       </div>
       <div className="row">
         <div className="col-sm">
-          <div class="card text-center">
-            <div class="card-header">Walk Sequence</div>
-            <div class="card-body">
-              <h5 class="card-title">Slide {counter + 1}</h5>
-              <p class="card-text">
+          <div className="card text-center">
+            <div className="card-header">Walk Sequence</div>
+            <div className="card-body">
+              <h5 className="card-title">Slide {counter + 1}</h5>
+              <p className="card-text">
                 <Walk />
               </p>
             </div>
-            <div class="card-footer text-muted">
+            <div className="card-footer text-muted">
               <Controls />
             </div>
           </div>

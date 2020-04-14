@@ -9,13 +9,13 @@ class Walk extends Component {
     } = this.props;
 
     return (
-      <div>
+      <>
         <img
           className="img-fluid"
-          alt="walk sequence image"
+          alt="walk sequence"
           src={images[counter]}
         />
-      </div>
+      </>
     );
   }
 }
