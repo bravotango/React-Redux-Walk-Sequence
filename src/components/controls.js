@@ -1,17 +1,15 @@
 import React, {Component} from "react";
 import "../App.scss";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 class Controls extends Component {
 
   render() {
     const {images,interval,isCycling,increment,decrement,pause,cycle,reset,setIntervalId,clearIntervalId} = this.props
-
     const handleClick = event => {
-      event.preventDefault();
+      event.stopPropagation();
       console.log(event);
       cycle();
-
     }
 
     if (!interval && isCycling) {
