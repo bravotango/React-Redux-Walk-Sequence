@@ -16,24 +16,25 @@ class Controls extends Component {
       setIntervalId,
       clearIntervalId
     } = this.props;
-    const handleClick = event => {
-      event.stopPropagation();
-      console.log(event);
+
+    const handleClickPlay = () => {
       cycle();
+      if (!interval) {
+        setIntervalId(
+          setInterval(() => {
+            increment(1, images.length - 1);
+          }, 250)
+        );
+
+      }
     };
 
-    if (!interval && isCycling) {
-      setIntervalId(
-        setInterval(() => {
-          increment(1, images.length - 1);
-        }, 250)
-      );
-    }
-
-    if (interval && !isCycling) {
-      alert("not cycling, clearing interval : " + interval);
-      clearInterval(interval);
-      clearIntervalId(interval);
+    const handleClickPause = () => {
+      pause();
+      if (interval) {
+        clearInterval(interval);
+        clearIntervalId(interval);
+      }
     }
 
     return (
@@ -42,8 +43,7 @@ class Controls extends Component {
           <button
             type="link"
             onClick={event => {
-              event.persist();
-              handleClick(event);
+              handleClickPlay();
             }}
           >
             <svg
@@ -75,7 +75,7 @@ class Controls extends Component {
               <path d="M1152 379l806 645-806 650V379zm128 266v762l474-383-474-379zM256 1674V379l806 645-806 650zM384 645v762l474-383-474-379z" />
             </svg>
           </button>
-          <button onClick={() => pause()}>
+          <button onClick={() => handleClickPause()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 2048 2048"
@@ -105,7 +105,7 @@ const mapStateToProps = state => {
   return {
     images: state.images,
     interval: state.interval,
-    isCycling: state.isCycling
+    isCycling: state.isCycling,
   };
 };
 
