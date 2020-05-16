@@ -3,18 +3,11 @@ import { connect } from "react-redux";
 
 class Walk extends Component {
   render() {
-    const {
-      images,
-      counter
-    } = this.props;
+    const { images, counter } = this.props;
 
     return (
       <>
-        <img
-          className="img-fluid"
-          alt="walk sequence"
-          src={images[counter]}
-        />
+        <img className="img-fluid" alt="walk sequence" src={images[counter]} />
       </>
     );
   }
@@ -26,6 +19,5 @@ const mapStateToProps = state => {
     counter: state.counter
   };
 };
-
 
 export default connect(mapStateToProps)(Walk);
