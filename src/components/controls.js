@@ -7,7 +7,6 @@ class Controls extends Component {
     const {
       images,
       interval,
-      isCycling,
       increment,
       decrement,
       pause,
@@ -25,7 +24,6 @@ class Controls extends Component {
             increment(1, images.length - 1);
           }, 250)
         );
-
       }
     };
 
@@ -35,12 +33,13 @@ class Controls extends Component {
         clearInterval(interval);
         clearIntervalId(interval);
       }
-    }
+    };
 
     return (
       <>
         <div className="btn-group" role="group">
           <button
+            class="btn"
             type="link"
             onClick={event => {
               handleClickPlay();
@@ -55,7 +54,7 @@ class Controls extends Component {
               <path d="M1792 1024L512 1920V128l1280 896zM640 1674l929-650-929-650v1300z" />
             </svg>
           </button>
-          <button onClick={() => decrement(1, images.length - 1)}>
+          <button class="btn" onClick={() => decrement(1, images.length - 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 2048 2048"
@@ -65,7 +64,7 @@ class Controls extends Component {
               <path d="M896 1674L90 1024l806-645v1295zm-128-267V645l-474 379 474 383zm218-383l806-645v1295l-806-650zm678 383V645l-474 379 474 383z" />
             </svg>
           </button>
-          <button onClick={() => increment(1, images.length - 1)}>
+          <button class="btn" onClick={() => increment(1, images.length - 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 2048 2048"
@@ -75,7 +74,7 @@ class Controls extends Component {
               <path d="M1152 379l806 645-806 650V379zm128 266v762l474-383-474-379zM256 1674V379l806 645-806 650zM384 645v762l474-383-474-379z" />
             </svg>
           </button>
-          <button onClick={() => handleClickPause()}>
+          <button class="btn" onClick={() => handleClickPause()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 2048 2048"
@@ -85,7 +84,9 @@ class Controls extends Component {
               <path d="M640 256h128v1536H640V256zm768 0v1536h-128V256h128z" />
             </svg>
           </button>
-          <button onClick={() => reset()}>reset</button>
+          <button class="btn" onClick={() => reset()}>
+            reset
+          </button>
         </div>
       </>
     );
@@ -96,7 +97,7 @@ const mapStateToProps = state => {
   return {
     images: state.images,
     interval: state.interval,
-    isCycling: state.isCycling,
+    isCycling: state.isCycling
   };
 };
 

@@ -7,7 +7,11 @@ class Walk extends Component {
 
     return (
       <>
-        <img className="img-fluid" alt="walk sequence" src={images[counter]} />
+        <img
+          className="img-fluid"
+          alt="walk sequence"
+          src={process.env.PUBLIC_URL + images[counter]}
+        />
       </>
     );
   }
