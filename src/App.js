@@ -5,6 +5,7 @@ import Controls from "./components/controls";
 
 function App() {
   const counter = useSelector(state => state.counter);
+  const isCycling = useSelector(state => state.isCycling);
 
   return (
     <div className="container">
@@ -29,7 +30,6 @@ function App() {
           <div className="card text-center">
             <div className="card-header">Walk Sequence</div>
             <div className="card-body">
-              <h5 className="card-title slide">Slide {counter + 1}</h5>
               <p className="card-text">
                 <Walk />
               </p>
@@ -46,6 +46,19 @@ function App() {
             >
               bravotango / ReactRedux-WalkSequence
             </a>
+          </p>
+          <p className="card-title slide">Slide {counter + 1}</p>
+          <p className="card-title slide">
+            isCycling{" "}
+            {isCycling ? (
+              <a href="#" class="badge badge-success">
+                &nbsp;
+              </a>
+            ) : (
+              <a href="#" class="badge badge-danger">
+                &nbsp;
+              </a>
+            )}
           </p>
         </div>
       </div>
