@@ -29,7 +29,7 @@ function App() {
           <div className="card text-center">
             <div className="card-header">Walk Sequence</div>
             <div className="card-body">
-              <h5 className="card-title">Slide {counter + 1}</h5>
+              <h5 className="card-title slide">Slide {counter + 1}</h5>
               <p className="card-text">
                 <Walk />
               </p>
@@ -38,6 +38,15 @@ function App() {
               <Controls />
             </div>
           </div>
+          <p>
+            Git:{" "}
+            <a
+              href="https://github.com/bravotango/ReactRedux-WalkSequence"
+              target="_blank"
+            >
+              bravotango / ReactRedux-WalkSequence
+            </a>
+          </p>
         </div>
       </div>
     </div>
