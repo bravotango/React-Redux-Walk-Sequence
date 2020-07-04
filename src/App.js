@@ -40,7 +40,9 @@ function App() {
               bravotango / ReactRedux-WalkSequence
             </a>
           </p>
-          <p className="card-title slide">Slide {counter + 1}</p>
+          <p className="card-title slide">
+            Slide <span className="badge badge-primary">{counter + 1}</span>
+          </p>
           <p className="card-title slide">
             isCycling{" "}
             {isCycling ? (
