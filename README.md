@@ -1,4 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Redux Walk Sequence
+
+This fun project uses 8 slides to simulate the "Walk Sequence". This project is fully responsive, leveraging the Bootstrap grid. Use the "Stereo-type" controls to play, pause, rewind, fast forward and reset to toggle thru the walk sequence.
+
+![screenshot](./src/images/home.png)
+
+## Deployed location
+
+[https://www.btgraphix.com/walk/](https://www.btgraphix.com/walk/)
+
+## Development
+
+This project is built with React, Redux, BootstrapCSS & was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -66,3 +78,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+()
