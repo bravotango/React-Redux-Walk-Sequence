@@ -1,11 +1,10 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import Walk from "./components/walk";
 import Controls from "./components/controls";
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  const isCycling = useSelector(state => state.isCycling);
+  const counter = useSelector((state) => state.counter);
+  const isCycling = useSelector((state) => state.isCycling);
 
   return (
     <div className="container">
@@ -46,11 +45,11 @@ function App() {
           <p className="card-title slide">
             isCycling{" "}
             {isCycling ? (
-              <a href="#" class="badge badge-success">
+              <a href="#" className="badge badge-success">
                 &nbsp;
               </a>
             ) : (
-              <a href="#" class="badge badge-danger">
+              <a href="#" className="badge badge-danger">
                 &nbsp;
               </a>
             )}
