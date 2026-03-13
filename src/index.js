@@ -1,34 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { createStore } from "redux";
-import allReducers from "./reducers";
 import { Provider } from "react-redux";
-import "bootstrap/scss/bootstrap.scss";
+import { configureStore } from "@reduxjs/toolkit";
 
-const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import App from "./App";
+import allReducers from "./reducers";
 
-//https://www.youtube.com/watch?v=CVpUuw9XSjY
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-//Store -> globalized state
+// Redux store
+const store = configureStore({
+  reducer: allReducers,
+});
 
-//Action increment = a simple function that returns an object
-
+// React 16 render
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
