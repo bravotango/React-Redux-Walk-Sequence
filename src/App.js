@@ -46,11 +46,11 @@ function App() {
             isCycling{" "}
             {isCycling ? (
               <a href="#" className="badge badge-success">
-                &nbsp;
+                true
               </a>
             ) : (
               <a href="#" className="badge badge-danger">
-                &nbsp;
+                false
               </a>
             )}
           </p>
